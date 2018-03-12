@@ -1,0 +1,11 @@
+<form #form="ngForm">
+  <input type="Number" name="param1" id="param1Id" [(ngModel)]="param_a">
+  <select #t (change)="callType(t.value)">
+    <option *ngFor="let type of types" [value]="type">
+      {{type}}
+    </option>
+  </select>
+  <input  type="Number" name="param2" id="param2Id" [(ngModel)]="param_b">
+  <button class="btn btn-success" (click)="submit()">=</button>
+  <div class="form-inline"> {{result}}</div>
+</form>
